@@ -2,7 +2,7 @@ import { useLoaderData } from "@remix-run/react";
 import { fetch } from "@remix-run/node";
 
 export const loader = async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const response = await fetch(`${process.env.BASE_API_URL}/users`);
 
   if (response.ok) {
     const users = await response.json();
@@ -28,11 +28,10 @@ interface User {
 
 const Users = () => {
   const { users } = useLoaderData<{ users: User[] }>();
-  console.log(users);
 
   return (
     <div>
-      <h1>users list</h1>
+      <h1>USER LIST</h1>
       {users.map((user) => (
         <li key={user.id}>
           {user.name} - {user.email}
