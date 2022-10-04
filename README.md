@@ -6,16 +6,18 @@ Installing dependencies:
 npm ci
 ```
 
+Move `.env_example` to `.env`
+
 Running the project:
 
 ```shell
-npm run dev
+npx remix dev
 ```
 
 Running e2e tests:
 
 ```shell
-npm run dev
+npx remix dev
 ```
 
 Then in another shell:
