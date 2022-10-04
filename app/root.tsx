@@ -8,6 +8,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import styles from "./styles/index.css";
+
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Cypress workshop",
@@ -15,7 +17,10 @@ export const meta: MetaFunction = () => ({
 });
 
 export const links: LinksFunction = () => {
-  return [{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }];
+  return [
+    { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+    { rel: "stylesheet", href: styles },
+  ];
 };
 
 export default function App() {
