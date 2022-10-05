@@ -5,6 +5,7 @@ export default defineConfig({
   e2e: {
     baseUrl: "http://localhost:3000",
     experimentalInteractiveRunEvents: true,
+    experimentalSessionAndOrigin: true,
     setupNodeEvents(on) {
       on("task", {
         interceptSSR({ method, path, statusCode, body }) {
